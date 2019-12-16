@@ -51,8 +51,8 @@
   
 
 <div class="content">
-  <div class="titles" id="centresinteret">
-    <div class="section">
+  <div class="titles">
+    <div id="centresinteret" class="section">
 
       <div class="row">
           <h2 class="center white-text">"CENTRES D'INTÉRÊT"</h2>
@@ -67,7 +67,7 @@
       <div class="container">
         <div class="row center">
          <div class="col s12 m4 offset-m4">
-         <table class="centered responsive-table">
+         <table class="centered">
             <tr>
               <td><a href="https://www.senscritique.com/Fabino_Fabien_L" target="_blank">Musique +++</a></td>
             </tr>
@@ -94,8 +94,8 @@
     <div class="parallax"><img src="backgroundcontenu.png" alt="Unsplashed background img 2"></div>
   </div>
 
-  <div class="titles" id="etudes">
-    <div class="section">
+  <div class="titles">
+    <div id="etudes" class="section">
 
       <div class="row">
         <div class="col s12 center">
@@ -109,7 +109,7 @@
 
   <div class="parallax-container valign-wrapper" id="contenu">
     <div class="section no-pad-bot">
-      <div class="container">
+      <div class="container" id="contenu-etudes">
         <div class="row">
           <div class="col s12 m6">
           <h5>Novembre 2019 - Décembre 2019</h5>
@@ -131,8 +131,8 @@
     <div class="parallax"><img src="backgroundcontenu.png" alt="Unsplashed background img 3"></div>
   </div>
 
-  <div class="titles" id="competences">
-      <div class="section">
+  <div class="titles">
+      <div id="competences" class="section">
   
         <div class="row">
 
@@ -148,7 +148,6 @@
       <div class="section no-pad-bot">
         <div class="container" id="container-competences">
           <div class="row center">
-           <!-- <h5 class="header col s12 light">A modern responsive front-end framework based on Material Design</h5> -->
            <div class="home">
               <p class="white-text">Anglais B2</p>
             </div>
@@ -167,8 +166,8 @@
       <div class="parallax"><img src="backgroundcontenu.png" alt="Unsplashed background img 2"></div>
     </div>
 
-    <div class="titles" id="contacts">
-        <div class="section">
+    <div class="titles">
+        <div id="contacts" class="section">
     
           <div class="row">
             <h2 class="center white-text">"CONTACTS"</h2>
@@ -180,12 +179,12 @@
     
       <div class="parallax-container valign-wrapper" id="contenu">
         <div class="section no-pad-bot">
-          <div class="container">
+          <div class="container" id="container-contacts">
             <div class="row center">
                 <p class="p-contacts black-text">Fabien Lecat, 24 ans</p>
                 <p class="p-contacts">7 Rue de Valmy, 59000 LILLE</p>
                 <p class="p-contacts black-text">06 42 42 28 92</p>
-                <p class="p-contacts">fabien.lecat.lille3@gmail.com</p>
+                <p class="p-contacts"><a class="mail" href="mailto:fabien.lecat.lille3@gmail.com">fabien.lecat.lille3@gmail.com</a></p>
             </div>
           </div>
         </div>
@@ -286,14 +285,42 @@
       }
     </script>
 
-    <!-- The core Firebase JS SDK is always required and must be listed first -->
-<script src="/__/firebase/7.6.0/firebase-app.js"></script>
+    <!--<script>
 
-<!-- TODO: Add SDKs for Firebase products that you want to use
-     https://firebase.google.com/docs/web/setup#available-libraries -->
+      const threshold = .6
 
-<!-- Initialize Firebase -->
-<script src="/__/firebase/init.js"></script>
+      const activate = function (elem) {
+        const id = elem.getAttribute('id')
+        const anchor = document.querySelector(`a[href="#${id}"]`)
+        if (anchor === null) {
+          return null
+        }
+        anchor.parentElement
+          .querySelectorAll('.active')
+          .forEach(node => node.classList.remove('.active'))
+        anchor.classList.add('active')
+      }
+
+      const callback = function (entries, observer) {
+        entries.forEach(function (entry) {
+          if (entry.intersectionRatio > threshold) {
+            activate(entry.target)
+          }
+        })
+      }
+
+      const spies = document.querySelectorAll('[data-spy]')
+
+      if (spies.length > 0){
+        const observer = new IntersectionObserver(callback, {
+          threshold: threshold
+        })
+        spies.forEach(function (spy) {
+          observer.observe(spy)
+        })
+      }
+
+    </script> -->
 
   </body>
 </html>
