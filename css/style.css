@@ -1,0 +1,372 @@
+/* Custom Stylesheet */
+/**
+ * Use this file to override Materialize files so you can update
+ * the core Materialize files in the future
+ *
+ * Made By MaterializeCSS.com
+ */
+
+ @font-face {
+  font-family: 'helvetica-bold';
+  src: url('fonts/HelveticaBold.ttf') format('truetype'),
+  }
+
+*{
+  font-family: helvetica-bold, sans-serif;
+  font-weight: 700;
+}
+
+h1, h2, h3{
+  font-weight: 700;
+}
+
+h1{
+  margin-top: 225px;
+  font-size: 90px;
+  color: #ffa01a;
+}
+
+#navbar{
+  z-index: 500;
+}
+
+nav ul a,
+nav .brand-logo {
+  color: white;
+  transition: all 0.7s ease;
+}
+
+nav ul a{
+  margin-right: 15px;
+}
+
+.titles .section{
+  background-color: black;
+  width: 100%;
+}
+
+p{
+  line-height: 2rem;
+  font-size: 19px;
+}
+
+.p-contacts{
+  font-size: 25px;
+}
+
+table{
+  font-size: 25px;
+}
+
+#contenu table a{
+  color: white;
+}
+
+#contenu table a:hover{
+  color: #ffa01a;
+}
+
+#contenu table td{
+  color: black;
+}
+
+#contenu table td:hover{
+  color: #38b5fc;
+}
+
+h5{
+  font-family: helvetica-bold, sans-serif;
+  font-weight: 700;
+  font-size: 23px;
+  color: black;
+}
+
+.sidenav-trigger {
+  color: white;
+}
+
+.parallax-container {
+  min-height: 380px;
+  line-height: 0;
+  height: auto;
+  color: white;
+}
+
+  .parallax-container .section {
+    width: 100%;
+  }
+
+@media only screen and (max-width : 992px) {
+  .parallax-container .section {
+    position: absolute;
+    top: 40%;
+  }
+  #index-banner .section {
+    top: 10%;
+  }
+}
+
+@media only screen and (max-width : 600px) {
+  #index-banner .section {
+    top: 0;
+  }
+}
+
+.icon-block {
+  padding: 0 15px;
+}
+.icon-block .material-icons {
+  font-size: inherit;
+}
+
+footer.page-footer {
+  margin: 0;
+}
+
+footer.page-footer h5{
+  color: #ffa01a;
+}
+
+footer.page-footer a, footer.page-footer p{
+  color: #38b5fc;
+}
+
+footer.page-footer .footer-copyright a{
+  color: #ffa01a;
+}
+
+footer.page-footer li a{
+  display: inline-block;
+}
+
+#index-banner{
+  height: 655px;
+}
+
+/* The sticky class is added to the navbar with JS when it reaches its scroll position */
+.sticky {
+  position: fixed;
+  top: 0;
+  width: 100%;
+}
+
+/* Add some top padding to the page content to prevent sudden quick movement (as the navigation bar gets a new position at the top of the page (position:fixed and top:0) */
+.sticky + .content {
+  padding-top: 60px;
+}
+
+
+/* TRANSITIONS */
+
+nav ul a:hover, .page-footer .container ul a:hover{
+  color: #ffa01a;
+}
+
+nav .brand-logo:hover{
+  color: #38b5fc;
+}
+
+/* CONTENT COMPETENCES */
+
+#container-competences{
+	width: 300px;
+	height: 400px;
+  font-size: 20px;
+  color: black;
+  padding-top: 75px;
+}
+
+#container-competences p{
+  margin-top: 5px;
+  padding-top: 10px;
+}
+
+.container .home{
+	width: 300px;
+	height: 50px;
+	border-left: 8px solid #38b5fc;
+  transition: all 0.5s;
+  background: #fed88b;
+	
+}
+
+.container .home:hover{
+    width: 225px;
+    background: #38b5fc;
+    border-radius: 0 100px 100px 0;
+}
+
+.container .blog{
+    height: 50px;
+    width: 300px;
+    border-left: 8px solid #ffa01a;
+    background: #fed88b;
+	transition: all 0.5s;
+}
+	
+.container .blog:hover{
+		width: 150px;
+    background:  #ffa01a;
+    border-radius: 0 100px 100px 0;
+}
+
+.container .works{
+    height: 50px;
+    width: 300px;
+    border-left: 8px solid #38b5fc;
+    background: #fed88b;
+    transition: all 0.5s;
+
+}
+
+.container .works:hover{
+    width: 150px;
+    background:  #38b5fc;
+    border-radius: 0 100px 100px 0;
+}
+
+.container .about{
+    height: 50px;
+    width: 300px;
+    border-left: 8px solid #ffa01a;
+    background: #fed88b;
+    transition: all 0.5s;
+
+}
+
+.container .about:hover{
+    width: 150px;
+    background:  #ffa01a;
+    border-radius: 0 100px 100px 0;
+}
+
+/* CSS MODALS */
+
+/* MODAL1 */
+
+.modal-item-1{
+  position: fixed;
+  top: 25px;
+  right: 25px;
+  bottom: 25px;
+  left: 25px;
+  background: white;
+  z-index: 99999;
+  opacity: 0;
+  -webkit-transition: opacity 400ms ease-in;
+  -moz-transition: opacity 400ms ease-in;
+  transition: opacity 400ms ease-in;
+  pointer-events: none;
+}
+
+.modal-item-1:target{
+  opacity: 1;
+  pointer-events: auto;
+}
+
+.modal-item-1 > div{
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0px;
+  left: 0px;
+}
+
+.modal-item-1 p{
+  text-align: justify;
+}
+
+.modal-item-1 img{
+  display: block;
+  width: 500px;
+  height: auto;
+  margin: auto;
+  padding-top: 25px;
+}
+
+.fermer-item1{
+  position: absolute;
+  top: 10px;
+  right: 10px;
+}
+
+.fermer-item1 i{
+  color: #ffa01a;
+  font-size: 20px;
+}
+
+/* MODAL 2 */
+
+.modal-item-2{
+  position: fixed;
+  top: 25px;
+  right: 25px;
+  bottom: 25px;
+  left: 25px;
+  background: white;
+  z-index: 99999;
+  opacity: 0;
+  -webkit-transition: opacity 400ms ease-in;
+  -moz-transition: opacity 400ms ease-in;
+  transition: opacity 400ms ease-in;
+  pointer-events: none;
+}
+
+.modal-item-2:target{
+  opacity: 1;
+  pointer-events: auto;
+}
+
+.modal-item-2 > div{
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0px;
+  left: 0px;
+}
+
+.modal-item-2 img{
+  display: block;
+  width: 700px;
+  height: auto;
+  margin: auto;
+  padding-top: 30px;
+}
+
+/* MODAL 3 */
+
+.modal-item-3{
+  position: fixed;
+  top: 10px;
+  right: 25px;
+  bottom: 10px;
+  left: 25px;
+  background: white;
+  z-index: 99999;
+  opacity: 0;
+  -webkit-transition: opacity 400ms ease-in;
+  -moz-transition: opacity 400ms ease-in;
+  transition: opacity 400ms ease-in;
+  pointer-events: none;
+}
+
+.modal-item-3:target{
+  opacity: 1;
+  pointer-events: auto;
+}
+
+.modal-item-3 > div{
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0px;
+  left: 0px;
+}
+
+.modal-item-3 img{
+  display: block;
+  width: 485px;
+  height: auto;
+  margin: auto;
+  padding-top: 10px;
+}
